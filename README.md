@@ -9,6 +9,11 @@ Gugasito (Gustavo Soto):
 
 Division de la problematica en metodos, analisis de la Problematica e identificacion de Errores.
 
+Debemos crear funciones para cada uno de los items en los caules en donde debemos comenzar en una funcion que cree una matriz con los 
+registros, otra que agregue personas a los registros, otras que sean de busqueda en los registros, tanto 
+por mayor de edad, menor de edad, tercer edad, entre otros. Debemos hacer pruebas unitarias 
+para ver si esta todo bien nuestro codigo y utilizar try catch para que este no falle
+al encontrar algun error.
 ## Identificación de Errores
 Esta todo en el main
 
