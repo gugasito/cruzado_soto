@@ -86,7 +86,7 @@ public class Main {
 
 
             try {
-                System.out.println("Ingrese el estadocivil:");
+                System.out.println("Ingrese el estado civil:");
                 estadocivil = s.nextLine();
             } catch (InputMismatchException e) {
                 System.err.println("Opción inválida");
@@ -99,7 +99,6 @@ public class Main {
                 System.err.println("Opción inválida");
             }
 
-
             registro[indiceDisponible][0] = nombre;
             registro[indiceDisponible][1] = estadocivil;
             registro[indiceDisponible][2] = String.valueOf(edad);
@@ -111,7 +110,6 @@ public class Main {
 
     public static void menu() {
         String[][] registro = new String[50][3];
-        int a = 0;
         do {
             System.out.println("""
                     Menú
@@ -123,17 +121,7 @@ public class Main {
                     6)Salir.
                     """);
 
-
-            do {
-                try {
-                    a = new Scanner(System.in).nextInt();
-                } catch (InputMismatchException e) {
-                    System.err.println("Opción inválida");
-                }
-            } while (a < 0 || a > 6);
-
-
-            switch (a) {
+            switch (opcion()) {
                 case 1:
                     menu1(registro);
                 case 2:
@@ -148,6 +136,18 @@ public class Main {
                     System.exit(0);
             }
         } while (true);
+    }
+
+    public static int opcion() {
+        int a = 0;
+        do {
+            try {
+                a = new Scanner(System.in).nextInt();
+            } catch (InputMismatchException e) {
+                System.err.println("Opción inválida");
+            }
+        } while (a < 0 || a > 6);
+        return a;
     }
 
     public static int obtenerUltimoEspacio(String[][] registro) {
